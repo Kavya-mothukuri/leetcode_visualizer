@@ -1,0 +1,140 @@
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 760px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+}
+.form {
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .textInput {
+    width: 25vw !important;
+  }
+  
+  .btn {
+    width: 10vw !important;
+    margin-left: 2vw !important;
+    height: 50px;
+    
+  }
+  
+  .flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+  
+  .narrowComponent {
+    padding-bottom: 6px !important;
+    padding-left: 30px;
+    
+    width: 27vw;
+    border-radius: 1.5px solid black;
+  }
+  
+  .broadComponent {
+    margin: 2vh auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(193, 232, 247); 
+    width: 90vw;
+    border-radius: 1.5px solid black;
+  }
+  
+  
+  .invalid {
+    margin: auto;
+    width: 40vw;
+  }
+  
+  .narrowOuter {
+    margin: 2vh auto;
+    width: 100vw;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    .form {
+      width: 90vw;
+    }
+  
+    .textInput {
+      width: 60vw !important;
+    }
+  
+    .flexContainer {
+      flex-direction: column;
+    }
+  
+    .btn {
+      margin-top: 2vh !important;
+      width: 15vw !important;
+      height: 40px;
+      margin-left: 20vw !important;
+    }
+  
+    .invalid {
+      width: 60vw;
+    }
+  }
+  
+  /*heatmap*/
+  .color-empty {
+    fill: #eeeeee;
+  }
+  .color-github-1 {
+    fill: #c6e48b;
+  }
+  .color-github-2 {
+    fill: #7bc96f;
+  }
+  .color-github-3 {
+    fill: #239a3b;
+  }
+  .color-github-4 {
+    fill: #196127;
+  }
+  
+  .responsiveBox {
+    width: 100%;
+    max-width: 650px;
+    margin: 1rem auto;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    background-color: rgb(193, 232, 247);
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Medium screens (tablets, <1024px) */
+  @media screen and (max-width: 1024px) {
+    .responsiveBox {
+      max-width: 90vw;
+    }
+  }
+  
+  /* Small screens (phones, <600px) */
+  @media screen and (max-width: 600px) {
+    .responsiveBox {
+      max-width: 95vw;
+      padding: 0.8rem;
+    }
+  }
+  
+  

@@ -1,0 +1,22 @@
+{
+    "short_name": "Leetcode Visualizer",
+    "name": "Leetcode Data Visualizer",
+    "description": "Website to visualize Leetcode analytics of single user and compare two users.",
+    "icons": [
+      {
+        "src": "newicon.png",
+        "type": "image/png",
+        "sizes": "200x200"
+      },
+      {
+        "src": "logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  
