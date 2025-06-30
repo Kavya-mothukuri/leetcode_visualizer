@@ -41,8 +41,10 @@ const SingleUser = () => {
 
   const fetchData = async (uname) => {
     setLoading(true);
+    const API_URL = import.meta.env.VITE_API_URL;
+
     try {
-      const response = await axios.get(`http://localhost:3000/user/${uname}`);
+      const response = await axios.get(`${API_URL}/user/${uname}`);
       const data = response.data;
 
       if (data?.matchedUser) {
@@ -99,20 +101,20 @@ const SingleUser = () => {
     return (
       <>
         <div className="flexContainer">
-        <div className="narrowOuter">
-          <Grid container spacing={2} justifyContent="center">
-            <Grid item xs={12} md={6}>
-              <div className="narrowComponent0">
-                <UserInfo userInfo={userInfo} />
-              </div>
+          <div className="narrowOuter">
+            <Grid container spacing={2} justifyContent="center">
+              <Grid item xs={12} md={6}>
+                <div className="narrowComponent0">
+                  <UserInfo userInfo={userInfo} />
+                </div>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <div className="narrowComponent0">
+                  <ContestInfo userContests={userContests} />
+                </div>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <div className="narrowComponent0">
-                <ContestInfo userContests={userContests} />
-              </div>
-            </Grid>
-          </Grid>
-        </div>
+          </div>
 
           <div className="broadComponent">
             <ContestRatingGraph userContestRankingHistory={userContestRankingHistory} />
