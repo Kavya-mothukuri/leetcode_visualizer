@@ -39,19 +39,19 @@ const CompareCustomTable = ({ rows, TableName, username1, username2 }) => {
                             backgroundColor: 'rgb(193, 232, 247)'
                         }}
                     >
-                        {rows.map((row) => (
+                        {Array.isArray(rows) && rows.map((row) => (
                             <TableRow key={row.id}>
                                 <TableCell sx={{ borderBottom: 'none' }} component="th" scope="row">
-                                    <strong>{row.name}</strong>
+                                <strong>{row?.name ?? '—'}</strong>
                                 </TableCell>
                                 <TableCell sx={{ borderBottom: 'none' }} align="right">
-                                    <strong>{row.data1}</strong>
+                                <strong>{row?.data1 ?? '—'}</strong>
                                 </TableCell>
                                 <TableCell sx={{ borderBottom: 'none' }} align="right">
-                                    <strong>{row.data2}</strong>
+                                <strong>{row?.data2 ?? '—'}</strong>
                                 </TableCell>
                             </TableRow>
-                        ))}
+                            ))}
                     </TableBody>
                 </Table>
             </TableContainer>
